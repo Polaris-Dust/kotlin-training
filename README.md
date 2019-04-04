@@ -62,3 +62,48 @@ Fill the `HelloController` class to make it answer the following JSON:
   "content": "Hello world!"
 }
 ```
+
+### Create a new POST endpoint
+
+Create a new `/companies` **POST** endpoint that will take a JSON like
+```json
+{
+  "name": "Antaes"
+}
+```
+
+and return the following response:
+```json
+{
+  "self": "http://localhost:8080/companies/1",
+  "name": "Antaes"
+}
+```
+
+### Create a new GET endpoint
+
+Create a new `/companies` **GET** endpoint that will return the location of recorded *companies*:
+```json
+[
+  "http://localhost:8080/companies/1",
+  "http://localhost:8080/companies/2"
+]
+```
+
+### Create a new PUSH endpoint
+
+Create a new `/companies/{id}` **PUSH** endpoint that will update the corresponding company data and returns it:
+```json
+{
+  "name": "Antaes Consulting S.A.",
+  "creationYear": 2007
+}
+```
+Response:
+```json
+{
+  "self": "http://localhost:8080/companies/1",
+  "name": "Antaes Consulting S.A.",
+  "creationYear": 2007
+}
+```
