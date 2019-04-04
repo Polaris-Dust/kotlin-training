@@ -1,0 +1,14 @@
+micronaut:
+  application:
+    name: kotlin-training
+  server:
+    cors:
+      enabled: true
+#tag::openapi[]
+  router:
+    static-resources:
+      swagger:
+        paths:
+          - classpath:META-INF/swagger
+        mapping: /openapi/**
+#end::openapi[]

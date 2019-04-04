@@ -40,3 +40,25 @@ fun main() = println("Hello")
 * [Online editor for a simple Kotlin file](https://play.kotlinlang.org)
 * [Training with a set of exercises to complete](https://play.kotlinlang.org/koans/overview)
 * [The sources of Kotlin](https://github.com/JetBrains/kotlin)
+
+## Exercises
+
+Compiling and running the exercises can be achieved with gradle:
+```bash
+./gradlew run
+```
+Then a [Micronaut](https://micronaut.io/) server will start.
+
+* Base address is http://localhost:8080
+* Remote port is `8000`
+* Health check is http://localhost:8080/health
+* OpenAPI file is http://localhost:8080/openapi/kotlin-training-1.0.yml 
+
+### REST Web server with Micronaut
+
+Fill the `HelloController` class to make it answer the following JSON:
+```json
+{
+  "content": "Hello world!"
+}
+```
